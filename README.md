@@ -26,7 +26,7 @@ The default port is *8080*. You can change the port from ***config.py*** file. A
 ## Run as daemon (Run on boot)
 
 To run on boot, create ***harmony-notify.service*** in */etc/systemd/system/*
-Replace **your_harmony-notify_directory** and **your_harmony-notify_app** as in your server.\
+\Replace **your_harmony-notify_directory** and **your_harmony-notify_app** as in your server.\
 For example:
 * **your_harmony-notify_directory** -> /root/Harmony-Notify
 * **your_harmony-notify_app** -> /root/Harmony-Notify/app.py
