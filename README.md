@@ -5,8 +5,7 @@ This project can run on Windows, Linux environment that installed [ Python3](htt
 ### Packages needed:
 - [Aiohttp](https://docs.aiohttp.org/en/stable/) - This package is used for building API Server
 ## Installation
-This project requires [Python3](https://www.python.org/downloads/).
-Instal needed packages from requirements.txt file
+This project requires [Python3](https://www.python.org/downloads/). Install needed packages from requirements.txt file
 ```sh
 cd Harmony-Notify
 pip install -r requirements.txt
