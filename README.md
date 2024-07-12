@@ -23,8 +23,8 @@ pip install -r requirements.txt
 ## Run
 Create ***config.py*** file with these information below:
 ```
-TELEGRAM_BOT_TOKEN=""
-TELEGRAM_CHAT_ID=""
+TELEGRAM_BOT_TOKEN="your_bot_token"
+TELEGRAM_CHAT_ID="your_channel/group_chat_id"
 ```
 
 Then you can run with
