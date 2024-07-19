@@ -16,7 +16,10 @@ Create ***config.py*** file with these information below:
 TELEGRAM_BOT_TOKEN="your_bot_token"
 TELEGRAM_CHAT_ID="your_channel/group_chat_id"
 ```
-
+If you want to send message to a topic in channel/group, just add your topic_id like below:
+```
+TELEGRAM_THREAD_ID="your_topic_id"
+```
 Then you can run with
 ```sh
 python3 app.py

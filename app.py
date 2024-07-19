@@ -15,7 +15,7 @@ async def harmony_notification(request):
     try:
         logging.info("Request received")
         dataRequest = await request.json()
-        # logging.info(dataRequest)
+        logging.info(dataRequest)
         cluster_name = dataRequest['cluster_name']
         tenant_name = dataRequest['tenant_name']
         alert_name = dataRequest['alert_name']
@@ -28,11 +28,19 @@ async def harmony_notification(request):
             "method": "POST",
             "contentType": "applicaton/json"
         }
-        data = {
-            'chat_id': config.TELEGRAM_CHAT_ID,
-            'parse_mode': 'HTML',
-            'text': f"<b>{severity_string}: {alert_name}</b>\n\n<b>Timestamp:</b> {timestamp}\n<b>Cluster:</b> {cluster_name}\n<b>Tenant:</b> {tenant_name}\n<b>Trigger:</b> {trig_display_name}\n\n<b>Message:</b> <i>{text}</i>"
-        }
+        try:
+            data = {                
+                'message_thread_id': config.TELEGRAM_THREAD_ID,
+                'chat_id': config.TELEGRAM_CHAT_ID,
+                'parse_mode': 'HTML',
+                'text': f"<b>{severity_string}: {alert_name}</b>\n\n<b>Timestamp:</b> {timestamp}\n<b>Cluster:</b> {cluster_name}\n<b>Tenant:</b> {tenant_name}\n<b>Trigger:</b> {trig_display_name}\n\n<b>Message:</b> <i>{text}</i>"
+            }
+        except:
+            data = {
+                'chat_id': config.TELEGRAM_CHAT_ID,
+                'parse_mode': 'HTML',
+                'text': f"<b>{severity_string}: {alert_name}</b>\n\n<b>Timestamp:</b> {timestamp}\n<b>Cluster:</b> {cluster_name}\n<b>Tenant:</b> {tenant_name}\n<b>Trigger:</b> {trig_display_name}\n\n<b>Message:</b> <i>{text}</i>"
+            }
 
         logging.info("Begin sending message to Telegram bot")        
         async with ClientSession() as session:
