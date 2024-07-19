@@ -24,7 +24,7 @@ Then you can run with
 ```sh
 python3 app.py
 ```
-The default port is *8080*. You can change the port from ***config.py*** file. Add ```PORT=8000``` in ***config.py*** file to change the port.
+The default port is *8080*. You can change the port from ***config.py*** file. For example: add ```PORT=8000``` in ***config.py*** file to change the port.
 
 ## Run as daemon (Run on boot)
 

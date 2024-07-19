@@ -52,6 +52,8 @@ async def harmony_notification(request):
 
     except Exception as ex:
         logging.error(ex)
+    
+    return web.HTTPBadRequest()
 
 try:
     port = config.PORT
