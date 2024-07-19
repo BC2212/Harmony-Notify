@@ -3,7 +3,7 @@ This project helps the A10 Harmony Controller send notifications to Telegram cha
 ## Requirements
 This project can run on Windows, Linux environment that installed [ Python3](https://www.python.org/downloads/).
 ### Packages needed:
-- [Aiohttp](https://docs.aiohttp.org/en/stable/) - This package is used for building API Server
+- [Aiohttp](https://docs.aiohttp.org/en/stable/) - This package is used for receiving Harmony POST request and sending POST request to Telegram BOT.
 ## Installation
 This project requires [Python3](https://www.python.org/downloads/). Install needed packages from requirements.txt file
 ```sh
